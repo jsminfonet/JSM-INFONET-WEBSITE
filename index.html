@@ -1,131 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-    <title>JSM INFONET | IT Support, Laptop & Desktop Repair, CCTV & Networking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="JSM INFONET provides professional IT Support, Laptop Repair, Desktop Repair, CCTV Installation, Networking, WiFi Solutions, Server Support and AMC Services in India.">
+  <title>JSM INFONET | Complete IT Solutions</title>
 
-    <meta name="keywords" content="JSM INFONET, IT Support, Laptop Repair, Desktop Repair, CCTV Installation, Networking, WiFi Solutions, Server Support, AMC, Computer Services">
+  <meta name="description"
+    content="JSM INFONET provides complete IT solutions including laptop repair, desktop repair, network security, WiFi solutions, CCTV, NVR, barcode solutions, IT sales and IT retainership.">
 
-    <meta name="robots" content="index, follow">
+  <meta name="keywords"
+    content="JSM INFONET, IT Support, Laptop Repair, Desktop Repair, CCTV, WiFi Solutions, Network Security, IT Retainership, Delhi">
 
-    <meta name="author" content="JSM INFONET">
+  <meta name="robots" content="index, follow">
 
-    <meta name="theme-color" content="#0056b3">
+  <meta name="author" content="JSM INFONET">
 
-    <link rel="canonical" href="https://www.jsminfonet.com/">
+  <meta name="theme-color" content="#123a5a">
 
-    <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="logo.jpg">
 
-    <link rel="stylesheet" href="style.css">
+  <style>
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #1c2b39;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+
+    header {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .topbar {
+      background: #123a5a;
+      color: white;
+      padding: 8px 5%;
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 5%;
+    }
+
+    .logo img {
+      height: 65px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #183b59;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #e8a900;
+    }
+
+    /* HERO BANNER */
+
+    .hero {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.96) 35%,
+          rgba(255,255,255,0.45)
+        ),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.15;
+      color: #123a5a;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e8a900;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #3d4c59;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #123a5a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0a263d;
+    }
+
+    .btn-secondary {
+      background: #e8a900;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #c88f00;
+    }
+
+    /* FEATURES */
+
+    .features {
+      background: #123a5a;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 25px 8%;
+      gap: 25px;
+    }
+
+    .feature {
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin-bottom: 5px;
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #123a5a;
+    }
+
+    .section-title p {
+      color: #666;
+      margin-top: 8px;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      color: #123a5a;
+      margin-bottom: 10px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 36px;
+      color: #123a5a;
+      margin-bottom: 20px;
+    }
+
+    .about-box {
+      background: #123a5a;
+      color: white;
+      padding: 50px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .about-box h3 {
+      color: #e8a900;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    /* RETAINERSHIP */
+
+    .retainership {
+      background: #123a5a;
+      color: white;
+      text-align: center;
+    }
+
+    .retainership h2 {
+      color: white;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .retainership span {
+      color: #e8a900;
+    }
+
+    .retainership p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .contact-box {
+      padding: 25px;
+      background: #f4f7fa;
+      border-radius: 10px;
+    }
+
+    .contact-box h3 {
+      color: #123a5a;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0c2a42;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 900px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 500px) {
+
+      .hero {
+        padding: 60px 7%;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
 <header>
-    <div class="container">
 
-        <h1>JSM INFONET</h1>
+  <div class="topbar">
+    📞 +91 98718 99894 &nbsp;&nbsp; | &nbsp;&nbsp;
+    ✉ support@jsminfonet.com
+  </div>
 
-        <p>Complete IT Infrastructure & Support Solutions</p>
+  <div class="navbar">
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
+    <div class="logo">
+      <a href="#">
+        <img src="logo.jpg" alt="JSM INFONET Logo">
+      </a>
     </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#retainership">IT RETAINERSHIP</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
 </header>
 
 
-<section id="home" class="hero">
-    <div class="container">
+<section class="hero">
 
-        <h2>Your Trusted IT Partner</h2>
+  <div class="hero-content">
 
-        <p>
-            Professional IT Sales, Services & Support for Homes, Offices and Businesses.
-        </p>
+    <h1>
+      COMPLETE <span>IT SOLUTIONS</span><br>
+      FOR YOUR BUSINESS
+    </h1>
 
-        <a class="btn" href="https://wa.me/919654400466">
-            Chat on WhatsApp
-        </a>
+    <p>
+      We provide reliable IT support, sales and services to keep your business connected, secure and efficient.
+    </p>
 
-    </div>
+    <a href="#services" class="btn btn-primary">
+      OUR SERVICES
+    </a>
+
+    <a href="#contact" class="btn btn-secondary">
+      CONTACT US
+    </a>
+
+  </div>
+
 </section>
 
 
-<section id="about">
-    <div class="container">
+<div class="features">
 
-        <h2>About Us</h2>
+  <div class="feature">
+    <h3>🛡 Trusted Support</h3>
+    <p>Reliable & Timely IT Support</p>
+  </div>
 
-        <p>
-            JSM INFONET provides Laptop & Desktop Sales,
-            Repair Services, IT Retainership, Network Security,
-            Wi-Fi Solutions, CCTV & NVR Installation,
-            Barcode Solutions and Complete IT Infrastructure Support.
-        </p>
+  <div class="feature">
+    <h3>👨‍💻 Experienced Team</h3>
+    <p>Skilled IT Professionals</p>
+  </div>
 
-    </div>
-</section>
+  <div class="feature">
+    <h3>⚙ Quality Solutions</h3>
+    <p>Best Brands & Latest Technology</p>
+  </div>
+
+  <div class="feature">
+    <h3>🎧 Customer Satisfaction</h3>
+    <p>Your Satisfaction is Our Priority</p>
+  </div>
+
+</div>
 
 
 <section id="services">
-    <div class="container">
 
-        <h2>Our Services</h2>
+  <div class="section-title">
+    <h2>OUR SERVICES</h2>
+    <p>We offer a wide range of IT services to meet your business needs</p>
+  </div>
 
-        <div class="card">💻 Laptop & Desktop Sales</div>
-        <div class="card">🔧 Laptop & Desktop Repair</div>
-        <div class="card">🏢 IT Retainership</div>
-        <div class="card">🌐 Network Security</div>
-        <div class="card">📶 Wi-Fi Solutions</div>
-        <div class="card">📹 CCTV & NVR Solutions</div>
-        <div class="card">🏷️ Barcode Solutions</div>
+  <div class="services-grid">
 
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>Laptop Repair</h3>
+      <p>Professional laptop repair services for all brands.</p>
     </div>
+
+    <div class="service-card">
+      <div class="service-icon">🖥</div>
+      <h3>Desktop Repair</h3>
+      <p>Complete desktop repair and maintenance.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛡</div>
+      <h3>Network Security</h3>
+      <p>Secure your business network and systems.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📶</div>
+      <h3>WiFi Solutions</h3>
+      <p>Reliable and high-speed WiFi solutions.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📹</div>
+      <h3>CCTV / NVR Solutions</h3>
+      <p>Complete CCTV installation and support.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">▥</div>
+      <h3>Barcode Solutions</h3>
+      <p>Barcode systems and business automation.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛒</div>
+      <h3>Laptop Sales</h3>
+      <p>Best laptops at competitive prices.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🖥</div>
+      <h3>Desktop Sales</h3>
+      <p>Quality branded desktops for every need.</p>
+    </div>
+
+  </div>
+
 </section>
 
 
-<section id="contact">
-    <div class="container">
+<section id="about" class="about">
 
-        <h2>Contact Us</h2>
+  <div>
 
-        <p>
-            <b>Phone:</b>
-            <a href="tel:+919654400466">+91 9654400466</a>
-        </p>
+    <h2>ABOUT JSM INFONET</h2>
 
-        <p>
-            <b>Email:</b>
-            <a href="mailto:jsminfonet@gmail.com">jsminfonet@gmail.com</a>
-        </p>
+    <p>
+      JSM INFONET provides professional and reliable IT support solutions for businesses and individuals.
+    </p>
 
-        <p>
-            <b>Website:</b>
-            <a href="https://www.jsminfonet.com">
-                www.jsminfonet.com
-            </a>
-        </p>
+    <br>
+
+    <p>
+      From laptop and desktop repairs to networking, WiFi, CCTV, barcode systems and IT infrastructure, we provide complete technology solutions under one roof.
+    </p>
+
+    <br>
+
+    <p>
+      Our goal is to provide reliable technology support and help businesses run smoothly.
+    </p>
+
+  </div>
+
+  <div class="about-box">
+
+    <h3>Complete IT Support</h3>
+
+    <p>
+      Sales • Services • Networking • Security • CCTV • WiFi • IT Retainership
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="retainership" class="retainership">
+
+  <h2>IT <span>RETAINERSHIP</span></h2>
+
+  <p>
+    Flexible IT Retainership plans for your business. Focus on your business and leave the IT support to us.
+  </p>
+
+  <a href="#contact" class="btn btn-secondary">
+    CONTACT FOR IT SUPPORT
+  </a>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+  <div class="section-title">
+
+    <h2>CONTACT US</h2>
+
+    <p>Get in touch with JSM INFONET for your IT requirements</p>
+
+  </div>
+
+
+  <div class="contact-grid">
+
+    <div class="contact-box">
+
+      <h3>📍 Office Address</h3>
+
+      <p>
+        Shop No. 4, Ground Floor,<br>
+        Plot No. 15, Khasra No. 64/2,<br>
+        Najafgarh, New Delhi - 110043
+      </p>
 
     </div>
+
+
+    <div class="contact-box">
+
+      <h3>📞 Phone</h3>
+
+      <p>+91 98718 99894</p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <h3>✉ Email</h3>
+
+      <p>support@jsminfonet.com</p>
+
+      <p>www.jsminfonet.com</p>
+
+    </div>
+
+  </div>
+
 </section>
 
 
 <footer>
-    <p>© 2026 JSM INFONET. All Rights Reserved.</p>
+
+  <p>
+    © 2026 JSM INFONET. All Rights Reserved.
+  </p>
+
 </footer>
 
 
 </body>
-
 </html>
