@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -28,6 +29,10 @@
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -65,6 +70,7 @@
       height: 65px;
       width: auto;
       object-fit: contain;
+      display: block;
     }
 
     nav ul {
@@ -84,13 +90,14 @@
       color: #e8a900;
     }
 
-    /* HERO BANNER */
+    /* HERO SECTION */
 
     .hero {
       min-height: 500px;
       display: flex;
       align-items: center;
       padding: 70px 8%;
+
       background:
         linear-gradient(
           90deg,
@@ -123,6 +130,8 @@
       color: #3d4c59;
       margin-bottom: 30px;
     }
+
+    /* BUTTONS */
 
     .btn {
       display: inline-block;
@@ -171,7 +180,7 @@
       margin-bottom: 5px;
     }
 
-    /* SECTION */
+    /* GENERAL SECTION */
 
     section {
       padding: 70px 8%;
@@ -329,7 +338,7 @@
       padding: 25px;
     }
 
-    /* MOBILE */
+    /* TABLET */
 
     @media(max-width: 900px) {
 
@@ -361,14 +370,30 @@
       }
     }
 
+    /* MOBILE */
+
     @media(max-width: 500px) {
+
+      .topbar {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .logo img {
+        height: 55px;
+      }
 
       .hero {
         padding: 60px 7%;
+        min-height: 520px;
       }
 
       .hero h1 {
         font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 17px;
       }
 
       .features {
@@ -385,6 +410,10 @@
         padding: 50px 6%;
       }
 
+      .section-title h2 {
+        font-size: 30px;
+      }
+
       .promo-banner {
         padding: 15px 3%;
       }
@@ -392,12 +421,19 @@
       .promo-banner img {
         border-radius: 8px;
       }
+
+      .about-box {
+        padding: 30px 20px;
+      }
+
     }
 
   </style>
+
 </head>
 
 <body>
+
 
 <header>
 
@@ -406,6 +442,7 @@
     ✉ support@jsminfonet.com
   </div>
 
+
   <div class="navbar">
 
     <div class="logo">
@@ -413,6 +450,7 @@
         <img src="logo.jpg" alt="JSM INFONET Logo">
       </a>
     </div>
+
 
     <nav>
       <ul>
@@ -428,6 +466,8 @@
 
 </header>
 
+
+<!-- HERO SECTION -->
 
 <section class="hero">
 
@@ -455,6 +495,8 @@
 </section>
 
 
+<!-- FEATURES -->
+
 <div class="features">
 
   <div class="feature">
@@ -480,12 +522,15 @@
 </div>
 
 
+<!-- SERVICES -->
+
 <section id="services">
 
   <div class="section-title">
     <h2>OUR SERVICES</h2>
     <p>We offer a wide range of IT services to meet your business needs</p>
   </div>
+
 
   <div class="services-grid">
 
@@ -496,6 +541,186 @@
     </div>
 
     <div class="service-card">
-      <div class="service-icon">🖥</div>
+      <div class="service-icon">🖥️</div>
       <h3>Desktop Repair</h3>
-      <p>Complete desktop repair
+      <p>Complete desktop repair and maintenance.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Network Security</h3>
+      <p>Secure your business network and systems.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📶</div>
+      <h3>WiFi Solutions</h3>
+      <p>Reliable and high-speed WiFi solutions.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📹</div>
+      <h3>CCTV / NVR Solutions</h3>
+      <p>Complete CCTV installation and support.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">▥</div>
+      <h3>Barcode Solutions</h3>
+      <p>Barcode systems and business automation.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>Laptop Sales</h3>
+      <p>Best laptops at competitive prices.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🖥️</div>
+      <h3>Desktop Sales</h3>
+      <p>Quality branded desktops for every need.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛠️</div>
+      <h3>IT Support</h3>
+      <p>Professional onsite and remote IT support services.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES BANNER -->
+
+<div class="promo-banner">
+  <img src="services-banner.png"
+       alt="JSM INFONET Google Workspace, G Suite and Microsoft 365 Services">
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+  <div>
+
+    <h2>ABOUT JSM INFONET</h2>
+
+    <p>
+      JSM INFONET provides professional and reliable IT support solutions for businesses and individuals.
+    </p>
+
+    <br>
+
+    <p>
+      From laptop and desktop repairs to networking, WiFi, CCTV, barcode systems and IT infrastructure, we provide complete technology solutions under one roof.
+    </p>
+
+    <br>
+
+    <p>
+      Our goal is to provide reliable technology support and help businesses run smoothly.
+    </p>
+
+  </div>
+
+
+  <div class="about-box">
+
+    <h3>Complete IT Support</h3>
+
+    <p>
+      Sales • Services • Networking • Security • CCTV • WiFi • IT Retainership
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- IT RETAINERSHIP -->
+
+<section id="retainership" class="retainership">
+
+  <h2>IT <span>RETAINERSHIP</span></h2>
+
+  <p>
+    Flexible IT Retainership plans for your business. Focus on your business and leave the IT support to us.
+  </p>
+
+  <a href="#contact" class="btn btn-secondary">
+    CONTACT FOR IT SUPPORT
+  </a>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="section-title">
+
+    <h2>CONTACT US</h2>
+
+    <p>Get in touch with JSM INFONET for your IT requirements</p>
+
+  </div>
+
+
+  <div class="contact-grid">
+
+    <div class="contact-box">
+
+      <h3>📍 Office Address</h3>
+
+      <p>
+        443/16 DDA Flat Madangir Khanpur<br>
+        Near Pushp Vihar Sector 4<br>
+        New Delhi - 110062
+      </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <h3>📞 Phone</h3>
+
+      <p>+91 96544 00466</p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <h3>✉ Email</h3>
+
+      <p>support@jsminfonet.com</p>
+
+      <p>www.jsminfonet.com</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 JSM INFONET. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+</body>
+
+</html>
