@@ -411,6 +411,33 @@
       padding: 25px;
     }
 
+    /* WHATSAPP SUPPORT BUTTON */
+
+    .whatsapp-support {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: white !important;
+      padding: 14px 20px;
+      border-radius: 30px;
+      text-decoration: none !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s;
+    }
+
+    .whatsapp-support:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
+    }
+
     /* TABLET */
 
     @media(max-width: 900px) {
@@ -499,6 +526,13 @@
         padding: 30px 20px;
       }
 
+      .whatsapp-support {
+        right: 12px;
+        bottom: 15px;
+        padding: 12px 16px;
+        font-size: 14px;
+      }
+
     }
 
   </style>
@@ -537,6 +571,7 @@
 
 </header>
 
+
 <!-- HERO SECTION -->
 
 <section class="hero">
@@ -564,6 +599,7 @@
 
 </section>
 
+
 <!-- FEATURES -->
 
 <div class="features">
@@ -589,6 +625,7 @@
   </div>
 
 </div>
+
 
 <!-- SERVICES -->
 
@@ -659,12 +696,14 @@
 
 </section>
 
+
 <!-- SERVICES BANNER -->
 
 <div class="promo-banner">
   <img src="services-banner.png"
        alt="JSM INFONET Google Workspace, G Suite, Microsoft 365 and Professional IT Services">
 </div>
+
 
 <!-- ABOUT -->
 
@@ -704,6 +743,7 @@
 
 </section>
 
+
 <!-- IT RETAINERSHIP -->
 
 <section id="retainership" class="retainership">
@@ -719,6 +759,7 @@
   </a>
 
 </section>
+
 
 <!-- CONTACT -->
 
@@ -774,6 +815,7 @@
 
 </section>
 
+
 <!-- FOOTER -->
 
 <footer>
@@ -783,6 +825,20 @@
   </p>
 
 </footer>
+
+
+<!-- FLOATING WHATSAPP SUPPORT -->
+
+<a href="https://wa.me/919654400466"
+   class="whatsapp-support"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with JSM INFONET on WhatsApp">
+
+  💬 WhatsApp Support
+
+</a>
+
 
 </body>
 </html>
